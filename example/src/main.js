@@ -1,19 +1,18 @@
 import { imageBlurProcessing } from '../../index';
-import moment from 'moment'
-let image = require('../assets/images/003.jpg');  
+let image = require('./../assets/images/001.jpg');  
 new Vue({
   el: "#app",
 
   data() {
      
     return {
-      imageFile:null,
       beforeImage: image,
       afterImage:null,
       processTime:0,
       isProcessing:false,
       size: 20,
       reverse: false,
+      count: 0,
       crop : {
         left: 0,
         top: 0,
@@ -25,8 +24,7 @@ new Vue({
 
  
   mounted() {
-    console.log("---")
- 
+
  
   },
   created() {
@@ -42,7 +40,7 @@ new Vue({
       this.afterImage = null
       this.isProcessing = true
       let startTime = new Date()
-      let src = this.beforeImage
+      let src = "." + this.beforeImage
       let options = {
         size: parseInt(this.size),
         rect: this.crop,
@@ -58,7 +56,7 @@ new Vue({
             this.afterImage = res
           })
         }.bind(this), 
-        "3"
+        10
       );      
       
     },
