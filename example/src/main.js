@@ -1,7 +1,6 @@
 import { imageBlurProcessing } from '../../index';
 import moment from 'moment'
 let image = require('../assets/images/003.jpg');  
-image = "." + image
 new Vue({
   el: "#app",
 
