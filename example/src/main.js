@@ -6,7 +6,7 @@ new Vue({
   data() {
      
     return {
-      beforeImage: image,
+      beforeImage: `./${image}`,
       afterImage:null,
       processTime:0,
       isProcessing:false,
@@ -40,7 +40,7 @@ new Vue({
       this.afterImage = null
       this.isProcessing = true
       let startTime = new Date()
-      let src = "." + this.beforeImage
+      let src = this.beforeImage
       let options = {
         size: parseInt(this.size),
         rect: this.crop,

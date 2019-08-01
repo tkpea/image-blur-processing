@@ -64,12 +64,11 @@
           </div>
           <div class="col-md-5">
               <h2>After</h2>
-          
               <figure  v-if="!isProcessing">
                   <img :src="afterImage">
               </figure>   
-              <div class="loading" v-if="isProcessing" >
-                  <div class="spinner-border m-5" role="status">
+              <div v-else class="loading"  >
+                  <div class="spinner-border" role="status">
                       <span class="sr-only">Loading...</span>
                     </div>                
               </div>
@@ -85,5 +84,11 @@
 <style>
 .custom-file {
   overflow: hidden;
+}
+.loading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
