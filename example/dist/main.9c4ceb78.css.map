@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/main.scss"],"names":[],"mappings":"AAAA,OACE,SAEA,WAEE,cAAA,CACA","file":"main.9c4ceb78.css","sourceRoot":"..","sourcesContent":["figure {\n  margin: 0;\n  \n  img {\n    max-width: 100%;\n    max-width: 100%;\n    object-fit:cover;\n  }\n}"]}
