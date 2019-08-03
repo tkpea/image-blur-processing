@@ -1,9 +1,8 @@
 {
   "name": "image-blur-processing",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "画像の指定した範囲をぼかし処理する",
   "main": "index.js",
-  "author": "Takuya <tkpea56@gmail.com> (https://github.com/tkpea)",
   "directories": {
     "example": "example"
   },
