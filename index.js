@@ -9,11 +9,9 @@ export function imageBlurProcessing(src,{size = 1,rect = null,reverse=false}) {
   image.src = src
   let startTime = Date.now(); // 開始時間
 
-
   return new Promise((resolve, reject) => {
   
     image.onload = () => {
-
       let blurStartX = (rect)?rect.left: 0
       let blurStartY = (rect)?rect.top:0
       let blurWidth = (rect)?rect.width: image.width
@@ -60,7 +58,6 @@ export function imageBlurProcessing(src,{size = 1,rect = null,reverse=false}) {
           }  
         }
       })
-
       context.putImageData(newImageData,0,0)
       const base64 = canvas.toDataURL(type);
       const endTime = new Date()
@@ -70,5 +67,4 @@ export function imageBlurProcessing(src,{size = 1,rect = null,reverse=false}) {
     };
     image.onerror = (e) => reject(e)
   });
-
 }
